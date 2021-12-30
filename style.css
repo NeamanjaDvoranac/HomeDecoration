@@ -1,0 +1,359 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap');
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+
+ html {
+     scroll-behavior: smooth;
+ }
+
+ 
+:root {
+    --fontFamily:'Roboto', sans-serif;
+    --fontSize:16px;
+    --padding:60px;
+    --transition:.4s ease;
+    --white: #fff;
+    --lightgray: lightgray;
+    --gray: #9a9a9a;
+    --blue: #5385c1;
+    --primary: #383838;
+    --secondary: #197d62;
+    --pink:#6c3949;
+    --black:#000;
+    
+}
+.container {
+    padding: 50px;
+    max-width: 1140px;
+    margin: auto;
+
+}
+
+body {
+    font-family:var(--fontFamily) ;
+    font-size: var(--fontSize);
+    background-color: var(--white);
+}
+button {
+    padding: 15px 25px;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+/******
+Navigacija
+******/
+
+nav {
+    background: var(--white);
+    
+    /* border-bottom: 1px solid #000; */
+    position: fixed;
+    width: 100%;
+    max-height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 5px 10px black;
+    z-index: 1;
+    padding: 0px 25px;
+    
+    
+    
+}
+
+
+
+nav ul {
+    list-style: none;
+    display: flex;
+   
+    
+}
+nav ul li a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: var(--blue);
+    margin-left: 65px;
+}
+nav ul li a:hover {
+    padding: 8px 5px;
+    color: var(--secondary);
+    transition: var(--transition);
+    background: var(--lightgray);
+    border-radius: 50px;
+}
+
+.logo {
+    list-style: none;
+    text-decoration: none;
+    color: var(--blue);
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: 900;
+    
+}
+
+.logo:hover {
+    
+    color: var(--secondary);
+    transition: var(--transition);
+    transform: rotateY(360deg);
+}
+
+/*******
+header
+*******/
+
+
+header {
+    background-image: linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.4)), url(ipexels-mo-8657160.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    clip-path: polygon(0 0, 100% 0, 100% 84%, 0% 100%);
+}
+
+header h1 {
+    margin-bottom: 10px;
+    font-size: 5rem;
+    color: var(--lightgray);
+    text-transform: uppercase;
+}
+
+header h4 {
+    font-size: 1.7rem;
+    color: var(--gray);
+}
+
+/*******
+galery
+********/
+
+
+.gallery {
+    background: var(--white);
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+   
+  
+}
+/* .gallery .list img {
+   
+    width: 100%;
+    display: block;
+} */
+
+.gallery .list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.gallery .list article {
+    flex: 0 0 32%;
+    margin-bottom: 30px;
+    border: 15px solid var(--lightgray);
+    border-radius: 10px;
+    width: 300px;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    box-shadow: 1px 1px 15px black;
+   
+    
+}
+.gallery .list article:nth-child(1) {
+    background-image: url(pexels-vecislavas-popa-1571463.jpg);
+    background-position: center;
+    background-size: cover;
+    font-size: 1.5rem;
+    color: var(--primary);
+    
+    
+}
+.gallery .list article:nth-child(2) {
+    background-image: url(pexels-tamil-king-3214064.jpg);
+    background-position: center;
+    background-size: cover;
+    font-size: 1.5rem;
+    color: var(--primary);
+
+}
+.gallery .list article:nth-child(3) {
+    background-image: url(pexels-rachel-claire-8112897.jpg);
+    background-position: center;
+    background-size: cover;
+    font-size: 1.5rem;
+    color: var(--gray);
+
+}
+.gallery .list article:nth-child(4) {
+    background-image: url(pexels-houzlook-com-3356416.jpg);
+    background-position: center;
+    background-size: cover;
+    font-size: 1.5rem;
+    color: var(--gray);
+
+}
+.gallery .list article:nth-child(5) {
+    background-image:url(pexels-sharad-kachhi-3937174.jpg);
+    background-position: center;
+    background-size: cover;
+    font-size: 1.5rem;
+    color: var(--gray);
+
+}
+.gallery .list article:nth-child(6) {
+    background-image: url(pexels-vecislavas-popa-3741317.jpg);
+    background-position: center;
+    background-size: cover;
+    font-size: 1.5rem;
+    color: var(--primary);
+
+}
+.gallery hgroup {
+    margin-bottom: 15px;
+    padding: 15px;
+}
+
+.gallery hgroup h2 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    color: var(--primary);
+}
+
+.gallery hgroup p {
+    color: var(--primary);
+    font-size: 1.5rem;
+}
+.gallery .list article:hover {
+    
+    border: 15px solid var(--blue);
+    transform: scale(1.1);
+    transition-duration: .7s;
+    
+}
+
+/*******
+about us
+*******/
+
+.aboutUs {
+    clip-path: polygon(0 16%, 100% 0, 100% 100%, 0% 100%);
+    background: var(--pink);
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.aboutUs article {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.aboutUs article h2 {
+    font-size: 2rem;
+    margin: 25px 0;
+    color: var(--gray);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing:1px;
+}
+
+.aboutUs article p {
+    font-size: 1.2rem;
+    color: var(--gray);
+    font-weight: 400;
+    letter-spacing: 1px;
+
+}
+
+.aboutUs article button {
+    background: transparent;
+    border: 2px solid black;
+    border-radius: 10px;
+    color: var(--black);
+    margin-top: 25px;
+    padding: 10px 15px;
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+.aboutUs article button:hover {
+    background: rgba(255,255,255,.1);
+    border: 2px solid rgba(255,255,255,.1);
+    cursor: pointer;
+    color: var(--gray);
+}
+
+
+/********
+footer
+********/
+
+
+footer {
+    background: var(--blue);
+    text-align: center;
+}
+
+footer p {
+    color: var(--black);
+    font-size: 1.1rem;
+}
+
+footer h3 {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+footer hgroup h2 {
+    font-size: 4rem;
+    color: var(--black);
+    padding: 15px 0;
+    text-transform: uppercase;
+}
+
+footer div {
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    line-height: 3;
+    flex-wrap: wrap;
+}
+footer div article:first-child {
+    flex: 0 0 55%;
+}
+footer div article:last-child {
+    flex: 0 0 35%;
+    
+}
+
+/*******
+botoomoBar
+*******/
+
+.bottomBar {
+    background: var(--black);
+    color: var(--white);
+    text-align: center;
+}
+.bottomBar .container {
+    padding: 10px;
+}
+
